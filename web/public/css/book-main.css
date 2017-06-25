@@ -1,0 +1,140 @@
+
+/*!
+ * Start Bootstrap - Blog Home (http://startbootstrap.com/)
+ * Copyright 2013-2016 Start Bootstrap
+ * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap/blob/gh-pages/LICENSE)
+ */
+
+body {
+    padding-top: 70px; /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
+}
+
+footer {
+    margin: 50px 0;
+}
+
+
+#slider-wrap{ /* Оболочка слайдера и кнопок */
+    width:660px;
+}
+#slider{ /* Оболочка слайдера */
+    width:640px;
+    height:360px;
+    overflow: hidden;
+    /*border:#eee solid 10px;*/
+    position:relative;}
+.slide{ /* Слайд */
+    width:100%;
+    height:100%;
+}
+.sli-links{ /* Кнопки смены слайдов */
+    margin-top:10px;
+    text-align:center;
+}
+.sli-links .control-slide{
+    margin:2px;
+    display:inline-block;
+    width:16px;
+    height:16px;
+    overflow:hidden;
+    text-indent:-9999px;
+    background:url(../images/radioBg.png) center bottom no-repeat;
+}
+.sli-links .control-slide:hover{
+    cursor:pointer;
+    background-position:center center;
+}
+.sli-links .control-slide.active{
+    background-position:center top;
+}
+#prewbutton, #nextbutton { /* Ссылка "Следующий" и "Педыдущий" */
+    display: block;
+    width: 15px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    overflow: hidden;
+    text-indent: -999px;
+    background: url(../images/arrowBg.png) left center no-repeat;
+    opacity: 0.8;
+    z-index: 3;
+    outline: none !important;
+}
+
+#prewbutton{left:10px;
+}
+#nextbutton {
+    right: 10px;
+    background:url(../images/arrowBg.png) right center no-repeat;
+}
+#prewbutton:hover, #nextbutton:hover{
+    opacity:1;
+}
+
+/*subscribe*/
+.popup_overlay{
+    display: none;
+    background: rgba(0,0,0,.9);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+.popup{
+    display: none;
+    background: #fff;
+    box-shadow: 0 0 10px rgba(0,0,0,1);
+    width: 600px;
+    height: 500px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-left: -300px;
+    margin-top: -250px;
+}
+.popup_title{
+    font-weight: bold;
+    padding: 10px;
+}
+.popup_content{
+    padding: 10px;
+    border-top: 1px solid #ccc;
+}
+.closer{
+    float: right;
+    cursor: pointer;
+}
+/*menu*/
+ul{
+    margin: 0;
+    padding: 0;
+}
+ul.dropdown_menu li {
+    background: rgba(22, 22, 22, 0.7);
+    border: 1px solid ;
+    list-style: none;
+    width: 150px;         /*ширина блока меню*/
+}
+ul.dropdown_menu li a {
+    text-decoration: none;
+    display: block;
+}
+ul.dropdown_menu li ul {
+    display: none;	/*скрываем вложенные пункты*/
+}
+
+
+ul.dropdown_menu li:hover {
+
+    position: relative;
+    background: rgba(22, 22, 22, 0.34);
+}
+ul.dropdown_menu li:hover > ul {
+    display: block;
+}
+ul.dropdown_menu li:hover ul{
+    position: absolute;
+    top: 0;       /*Задаём координаты для вложенных пунктов*/
+    left: 150px; /*меню раскрывается вправо*/
+}
